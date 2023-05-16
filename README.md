@@ -2,7 +2,7 @@
 Palantir is a fluent API built over top of Reflection Classes. Its aim is to provide a robust and easy-to-use method to drill down for certain conditions (parameters, etc.).
 
 ## Experimental API
-This is just something I have messed with... who knows whether it's a good idea (for performance and/or DX reasons).
+This is just something I have messed with... who knows whether it's a good idea (for performance and/or DX reasons). Under the hood, a combination of new collection objects and `FilterIterator` are being used.
 
 ```php
 // Retrieves all methods for the `ClassDescriptor` class.
