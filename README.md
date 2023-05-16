@@ -23,7 +23,7 @@ $staticOrNamedFinal = $methods
 echo $methods->count(), PHP_EOL;
 
 // Outputs "1"
-echo $methods->count(), PHP_EOL;
+echo $namedFinal->count(), PHP_EOL;
 
 // Outputs "2"
 echo $staticOrNamedFinal->count(), PHP_EOL;
