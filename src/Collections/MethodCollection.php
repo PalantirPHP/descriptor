@@ -72,6 +72,13 @@ final class MethodCollection extends FilterIterator
         return $this->filter(new MethodIsStaticFilter);
     }
 
+    public function first(): ?MethodDescriptor
+    {
+        $this->rewind();
+
+        return $this->current() ?? null;
+    }
+
     public function count(): int
     {
         return iterator_count($this);

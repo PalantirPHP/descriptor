@@ -6,6 +6,7 @@ use DateTime;
 use Palantir\Descriptor\Collections\MethodCollection;
 use ReflectionClass;
 use ReflectionMethod;
+use UnexpectedValueException;
 
 final class ClassDescriptor
 {
@@ -30,6 +31,14 @@ final class ClassDescriptor
     public function name(): string
     {
         return $this->reflectionClass->getName();
+    }
+
+    public function method(string $method): MethodDescriptor
+    {
+        return $this
+            ->methods()
+            ->name($method)
+            ->first() ?? throw new UnexpectedValueException("Method [$method] does not exist.");
     }
 
     public function methods(): MethodCollection
